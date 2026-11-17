@@ -8,167 +8,356 @@
 <meta property="og:title" content="KCC SwitchSmart | Project Portfolio">
 <meta property="og:description" content="Sensors and AI to switch off hidden energy waste in empty classrooms at KCC.">
 <meta property="og:image" content="assets/classroom.jpg">
+<meta name="theme-color" content="#0f2e22">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--g:#2d6a4f;--g2:#e8f3ec;--or:#c9701a;--bl:#3b5b7a;--ink:#1d1f1e;--mut:#59615d;--bg:#ffffff;--card:#f5f8f6;--line:#d5e3da}
-@media (prefers-color-scheme:dark){:root{--g:#6fcf9a;--g2:#16241d;--or:#f0a35a;--bl:#8fb4da;--ink:#eef3f0;--mut:#a7b3ac;--bg:#0f1512;--card:#17201b;--line:#27362d}}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
-a{color:var(--g)}
-.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
-nav .wrap{display:flex;gap:18px;overflow-x:auto;padding:12px 20px;white-space:nowrap;font-size:14px}
-nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--g)}
-.hero{background:var(--g);color:#fff;padding:56px 0}
-.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
-.hero small{letter-spacing:.2em;font-weight:700;opacity:.8}
-.hero h1{font-size:clamp(34px,6vw,52px);line-height:1.05;margin:10px 0}
-.hero p{font-size:18px;margin:0 0 18px}
-.hero img{width:100%;border-radius:12px;display:block}
-.btn{display:inline-block;background:#fff;color:#1f4f3a;padding:10px 18px;border-radius:8px;font-weight:700;text-decoration:none;margin:0 8px 8px 0}
-.btn.alt{background:transparent;color:#fff;border:1px solid #fff}
-@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}}
-section{padding:46px 0;border-bottom:1px solid var(--line)}
-.tag{color:var(--or);font-weight:700;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
-h2{font-size:clamp(24px,4vw,32px);margin:4px 0 18px;color:var(--g)}
-.grid{display:grid;gap:16px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:760px){.g2,.g3,.g4{grid-template-columns:1fr}}
-.card{background:var(--card);border-left:4px solid var(--g);border-radius:8px;padding:14px 16px}
-.card.or{border-color:var(--or)}.card.bl{border-color:var(--bl)}
-.card h3{margin:0 0 4px;font-size:16px}
-figure{margin:0}figure img{width:100%;border-radius:10px;display:block}
-figcaption{font-size:13px;color:var(--mut);font-style:italic;margin-top:6px}
-.stat{text-align:center;padding:16px;border:1.5px solid var(--or);border-radius:10px}
-.stat b{display:block;font-size:26px;color:var(--or)}.stat span{font-size:13px;color:var(--mut)}
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-@media(max-width:760px){.flow{grid-template-columns:1fr 1fr}}
-.flow div{border:1.5px solid var(--g);border-radius:8px;overflow:hidden;text-align:center;font-size:14px}
-.flow div b{display:block;background:var(--g);color:var(--bg);padding:6px}.flow div span{display:block;padding:12px 8px}
-.flow div.ai{border-color:var(--or)}.flow div.ai b{background:var(--or)}.flow div.out{border-color:var(--bl)}.flow div.out b{background:var(--bl)}
-table{min-width:560px;width:100%;border-collapse:collapse;font-size:14.5px}
-  .tw{overflow-x:auto}
-th{background:var(--g);color:var(--bg);text-align:left;padding:8px 10px}td{padding:8px 10px;border-bottom:1px solid var(--line)}
-.note{background:var(--g2);border-left:4px solid var(--or);padding:12px 16px;border-radius:8px;margin-top:16px}
-ol.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-@media(max-width:760px){ol.steps{grid-template-columns:1fr 1fr}}
-ol.steps li{background:var(--card);border-radius:8px;padding:10px 12px;font-size:14px}ol.steps b{color:var(--g);display:block}
-footer{padding:30px 0;color:var(--mut);font-size:14px}
+:root{--g:#2d6a4f;--g2:#1f5a42;--gd:#0f2e22;--mint:#e8f3ec;--or:#d9822b;--or2:#f0a35a;--bl:#3b5b7a;--ink:#17201b;--mut:#5a665f;--bg:#fbfcfb;--card:#ffffff;--soft:#f1f6f3;--line:#dbe6df;--shadow:0 8px 30px rgba(15,46,34,.08);--red:#c0392b}
+[data-theme=dark]{--g:#6fcf9a;--g2:#4fb381;--mint:#16241d;--or:#f0a35a;--or2:#ffc387;--bl:#8fb4da;--ink:#eef3f0;--mut:#a7b3ac;--bg:#0b100d;--card:#121a15;--soft:#16201a;--line:#25352b;--shadow:0 8px 30px rgba(0,0,0,.35);--red:#ff7b6b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;overflow-x:hidden;font:16.5px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);transition:background .3s,color .3s}
+h1,h2,h3,.num{font-family:"Space Grotesk",Inter,system-ui,sans-serif}
+a{color:var(--g)}img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--g),var(--or));z-index:50}
+nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:6px;height:58px}
+nav .logo{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:700;color:var(--g);margin-right:auto;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0;flex:0 1 auto}nav .logo{flex:none}@media(max-width:560px){nav .logo{display:none}nav .links{flex:1}}
+nav .links a{padding:6px 11px;border-radius:99px;font-size:14px;text-decoration:none;color:var(--mut);white-space:nowrap}
+nav .links a.on,nav .links a:hover{background:var(--mint);color:var(--g)}
+.iconbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;width:36px;height:36px;cursor:pointer;font-size:16px;flex:none}
+.pill{padding:7px 14px;border-radius:99px;background:var(--g);color:var(--bg);font-weight:600;font-size:13.5px;text-decoration:none;white-space:nowrap}
+@media(max-width:820px){nav .pill{display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(1200px 500px at 85% -10%,#2f7d5b 0,transparent 60%),linear-gradient(160deg,#0b2419,#12392a 55%,#1b5a41);padding:76px 0 84px}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at 70% 30%,#000,transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.2em;color:#bfe0cc;border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:99px}
+.hero h1{font-size:clamp(40px,7vw,70px);line-height:1;margin:18px 0 14px;letter-spacing:-.02em}
+.hero h1 span{background:linear-gradient(90deg,#9ff0c3,#ffd29a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .tag{font-size:19px;color:#d9eee1;max-width:30ch;margin:0 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}.chips span{font-size:13px;padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;margin:0 8px 8px 0;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}.btn.p{background:#fff;color:#133a2a}.btn.s{border:1px solid rgba(255,255,255,.5);color:#fff}
+.frame{position:relative;transform:rotate(2deg);transition:transform .4s}.frame:hover{transform:rotate(0)}
+.frame img{width:100%;display:block;border-radius:16px;border:6px solid rgba(255,255,255,.92);box-shadow:0 24px 60px rgba(0,0,0,.4);cursor:zoom-in}
+.badge{position:absolute;background:var(--card);color:var(--ink);border-radius:12px;padding:8px 12px;font-size:13px;box-shadow:var(--shadow);animation:float 5s ease-in-out infinite}
+.badge b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:20px;color:var(--or)}
+.b1{left:-18px;bottom:-16px}.b2{right:-10px;top:-14px;animation-delay:-2.5s}
+@keyframes float{50%{transform:translateY(-7px)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.frame{transform:none;margin-top:10px}.b1{left:6px}.b2{right:6px}}
+/* sections */
+section{padding:72px 0}section.alt{background:var(--soft)}
+.kick{display:flex;align-items:center;gap:12px;color:var(--or);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.kick .num{font-size:34px;color:var(--line);letter-spacing:0;font-weight:700;-webkit-text-stroke:1px var(--or);color:transparent}
+h2{font-size:clamp(28px,4.4vw,42px);line-height:1.12;margin:8px 0 14px;letter-spacing:-.01em}
+.lead{font-size:18px;color:var(--mut);max-width:62ch}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g2,.g3{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px)}
+.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--mut);font-size:15.5px}
+.card .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:var(--mint);color:var(--g);margin-bottom:12px}
+.card .ic svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card.or .ic{color:var(--or)}.card.bl .ic{color:var(--bl)}
+.photo{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--card)}
+.photo img{display:block;width:100%;cursor:zoom-in;transition:transform .5s}.photo:hover img{transform:scale(1.03)}
+.photo figcaption{padding:10px 14px;font-size:13.5px;color:var(--mut)}
+figure{margin:0}.g2>figure.photo{align-self:start}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}
+.stat b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:clamp(26px,4vw,36px);color:var(--or);display:block;line-height:1.1}.stat span{font-size:13.5px;color:var(--mut)}
+.callout{background:linear-gradient(135deg,var(--mint),transparent);border:1px solid var(--line);border-left:5px solid var(--or);border-radius:14px;padding:18px 20px;margin-top:22px}
+.callout.honest{border-left-color:var(--bl)}
+/* calculator */
+.calc{background:linear-gradient(160deg,#10301f,#1b5a41);color:#fff;border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.calc h3{margin:0 0 4px;font-size:20px}.calc small{color:#cfe8da}
+.sl{margin:16px 0 4px;display:flex;justify-content:space-between;font-size:14.5px}.sl b{color:#ffd29a}
+input[type=range]{width:100%;accent-color:#ffb870}
+.out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.out div{background:rgba(255,255,255,.1);border-radius:12px;padding:12px;text-align:center}
+.out b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:21px;color:#ffd29a}.out span{font-size:12px;color:#d6eadf}
+@media(max-width:520px){.out{grid-template-columns:1fr}}
+/* power bars */
+.pb{display:grid;grid-template-columns:110px 1fr 90px;gap:10px;align-items:center;margin:11px 0;font-size:14.5px}
+.pb .t{height:22px;background:var(--soft);border-radius:8px;overflow:hidden}.pb .t i{display:block;height:100%;width:0;border-radius:8px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.pb.on .t i{width:var(--w)}
+.grid>*{min-width:0}@media(max-width:520px){.pb{grid-template-columns:80px 1fr 74px;font-size:13px}}
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch}
+.flow .st{position:relative;background:var(--card);border:1.5px solid var(--g);border-radius:14px;padding:16px;margin-right:30px;box-shadow:var(--shadow)}
+.flow .st:last-child{margin-right:0}
+.flow .st:after{content:"";position:absolute;right:-26px;top:50%;width:22px;height:2px;background:repeating-linear-gradient(90deg,var(--g) 0 5px,transparent 5px 9px);animation:dash 1s linear infinite}
+.flow .st:last-child:after{display:none}
+@keyframes dash{to{background-position:9px 0}}
+.flow .st h3{margin:0 0 4px;font-size:16px;color:var(--g)}.flow .st p{margin:0;font-size:14px;color:var(--mut)}
+.flow .st.ai{border-color:var(--or)}.flow .st.ai h3{color:var(--or)}.flow .st.act{border-color:var(--bl)}.flow .st.act h3{color:var(--bl)}
+.flow .st small{display:block;font-weight:700;letter-spacing:.12em;font-size:11px;color:var(--mut);margin-bottom:6px}
+@media(max-width:860px){.flow{grid-template-columns:1fr 1fr;gap:16px}.flow .st{margin-right:0}.flow .st:after{display:none}}
+.chipset{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chipset span{font-size:13.5px;padding:6px 12px;background:var(--mint);color:var(--g);border-radius:99px;font-weight:500}
+/* sim */
+.simbox{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tabs button{border:1px solid var(--line);background:var(--soft);color:var(--ink);padding:8px 14px;border-radius:99px;cursor:pointer;font:500 14px Inter,sans-serif}
+.tabs button.on{background:var(--g);color:var(--bg);border-color:var(--g)}
+canvas{width:100%;height:300px;display:block}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--mut);margin-top:8px}.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.sticker{display:inline-block;background:var(--or);color:#1b1206;font-weight:700;font-size:12px;padding:4px 10px;border-radius:99px;margin-bottom:10px}
+/* results */
+.bar{margin:14px 0}.bar .row{display:flex;justify-content:space-between;font-size:14.5px;margin-bottom:5px}.bar .t{height:26px;background:var(--soft);border-radius:9px;overflow:hidden}
+.bar .t i{display:block;height:100%;width:0;border-radius:9px;background:var(--g);transition:width 1.3s cubic-bezier(.2,.8,.2,1)}.bar.on .t i{width:var(--w)}.bar.bad .t i{background:var(--red)}
+/* impact */
+.pil{font-size:11.5px;font-weight:700;letter-spacing:.1em;padding:3px 9px;border-radius:99px;color:#fff;display:inline-block;margin-bottom:8px}
+.pil.E{background:var(--g2)}.pil.S{background:var(--or)}.pil.G{background:var(--bl)}
+.card .now{font-size:13.5px;color:var(--mut)}.card .tg{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:600;font-size:17px;margin-top:6px}
+.tl{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tl:before{content:"";position:absolute;left:0;right:0;top:14px;height:3px;background:linear-gradient(90deg,var(--g),var(--or),var(--bl));border-radius:3px}
+.tl .ph{position:relative;padding-top:38px}.tl .ph:before{content:"";position:absolute;top:6px;left:0;width:18px;height:18px;border-radius:50%;background:var(--bg);border:4px solid var(--g)}
+.tl .ph:nth-child(2):before{border-color:var(--or)}.tl .ph:nth-child(3):before{border-color:var(--bl)}
+.tl h3{margin:0 0 4px;font-size:17px}.tl p{margin:0;font-size:15px;color:var(--mut)}
+@media(max-width:760px){.tl{grid-template-columns:1fr}.tl:before{display:none}.tl .ph{padding-top:0;padding-left:30px}.tl .ph:before{top:5px}}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:600}details p{margin:8px 0 0;color:var(--mut);font-size:15px}
+/* journey */
+.jr{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.jr li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;font-size:14.5px;position:relative}
+.jr li b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;color:var(--g);font-size:20px}
+@media(max-width:860px){.jr{grid-template-columns:1fr 1fr}}
+ul.jr{padding:0;margin:0}
+footer{background:var(--gd);color:#cfe3d7;padding:46px 0;font-size:14.5px}footer a{color:#9ff0c3}footer b{color:#fff}
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;place-items:center;z-index:100;padding:20px;cursor:zoom-out}#lb.on{display:grid}#lb img{max-height:92vh;border-radius:10px}
 </style>
 </head>
 <body>
-<header class="hero"><div class="wrap">
- <div>
-  <small>PROJECT PORTFOLIO</small>
-  <h1>KCC SwitchSmart</h1>
-  <p>Switching off hidden energy waste in classrooms with sensors and AI.</p>
-  <p style="font-size:15px;opacity:.9"><b>Vishal Kumar Tripathi</b><br>B.Tech, 3rd Year, KCC Institute of Technology and Management<br>1M1B Green Skills &amp; Applied AI Internship, Batch 3</p>
-  <a class="btn" href="assets/Vishal_Kumar_Tripathi_ProjectPortfolio.pdf">Download portfolio (PDF)</a><a class="btn alt" href="#problem">Start the journey</a>
+<div id="bar"></div>
+<nav><div class="wrap">
+ <a class="logo" href="#top">SwitchSmart</a>
+ <div class="links">
+  <a href="#problem">Problem</a><a href="#insights">Insights</a><a href="#solution">Solution</a><a href="#prototype">Prototype</a><a href="#results">Results</a><a href="#impact">Impact</a><a href="#journey">Journey</a>
  </div>
- <figure><img src="assets/classroom.jpg" alt="KCC classroom with ceiling ACs, lights and fans on and only bags on the benches"><figcaption style="color:#d8ebdf">My photo, KCC classroom, 8 Oct 2026.</figcaption></figure>
+ <button class="iconbtn" id="theme" aria-label="Toggle dark mode">🌓</button>
+ <a class="pill" href="assets/Vishal_Kumar_Tripathi_ProjectPortfolio.pdf">Portfolio PDF</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+ <div>
+  <span class="eyebrow">PROJECT PORTFOLIO</span>
+  <h1>KCC <span>SwitchSmart</span></h1>
+  <p class="tag">Switching off hidden energy waste in classrooms with sensors and AI.</p>
+  <div class="chips"><span>Vishal Kumar Tripathi</span><span>B.Tech, 3rd Year</span><span>KCC Institute of Technology and Management</span><span>1M1B Green Skills &amp; Applied AI, Batch 3</span></div>
+  <a class="btn p" href="assets/Vishal_Kumar_Tripathi_ProjectPortfolio.pdf">Download portfolio (PDF)</a><a class="btn s" href="#problem">Start the journey</a>
+ </div>
+ <div class="frame">
+  <img src="assets/classroom.jpg" alt="KCC classroom with ceiling ACs, lights and fans on and only bags on the benches" data-zoom>
+  <div class="badge b1"><b>about 300</b>rooms at KCC</div><div class="badge b2"><b>8 Oct 2026</b>my own photo</div>
+ </div>
 </div></header>
-<nav><div class="wrap"><a href="#problem">Problem</a><a href="#insights">Insights</a><a href="#solution">Solution</a><a href="#prototype">Prototype</a><a href="#results">Testing</a><a href="#impact">Impact</a><a href="#next">What's next</a></div></nav>
 
 <section id="problem"><div class="wrap">
- <div class="tag">1. The problem</div><h2>Classrooms keep running after students leave</h2>
- <div class="grid g2">
+ <div class="kick rv"><span class="num">01</span>The problem</div>
+ <h2 class="rv">Classrooms keep running after students leave</h2>
+ <p class="lead rv">Classroom ACs, tube lights and fans stay on once the last student walks out, and nobody measures how much or for how long.</p>
+ <div class="grid g2" style="margin-top:26px">
   <div class="grid">
-   <div class="card or"><h3>What problem am I solving?</h3>Classroom ACs, tube lights and fans stay on after students leave, and nobody measures how much or for how long.</div>
-   <div class="card or"><h3>Who is affected and why does it matter?</h3>KCC (about 300 rooms) pays for the extra electricity, everyone shares the extra carbon, and no one is responsible for switching off.</div>
-   <div class="card or"><h3>What inspired me?</h3>Seeing it myself in my own classrooms at KCC while doing a Campus Sustainability Assessment, and hearing the same concern from a classmate.</div>
+   <div class="card or rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></div><h3>What problem am I solving?</h3><p>ACs, tube lights and fans left on in empty classrooms, with no data on how long or how much power is wasted.</p></div>
+   <div class="card or rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.5 6 5"/></svg></div><h3>Who is affected, and why does it matter?</h3><p>KCC (about 300 rooms) pays for the electricity, everyone shares the extra carbon, and no one is responsible for switching off.</p></div>
+   <div class="card or rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-3.5 10.9V17h7v-3.1A6 6 0 0 0 12 3zM9.5 20.5h5"/></svg></div><h3>What inspired me?</h3><p>Seeing it in my own classrooms during a Campus Sustainability Assessment, and hearing the same concern from a classmate.</p></div>
   </div>
-  <div>
-   <figure><img src="assets/classroom.jpg" alt="KCC classroom with appliances on and no students"><figcaption>Real example: KCC classroom, 8 Oct 2026. Ceiling ACs, tube lights and fans on; only bags on the benches.</figcaption></figure>
-   <div class="stat" style="margin-top:14px"><b>31.5 to 54 kWh a day</b><span>Estimated waste (assumed): 30 of about 300 rooms each leave one AC on for an extra hour. That is 4.6 to 7.9 tonnes of CO2 a year.</span></div>
-  </div>
+  <figure class="photo rv"><img src="assets/classroom.jpg" alt="KCC classroom with appliances on and no students" data-zoom><figcaption><b>Real example:</b> KCC classroom, 8 Oct 2026. Ceiling ACs, tube lights and fans on; only bags on the benches. (Click to enlarge)</figcaption></figure>
+ </div>
+ <div class="calc rv" style="margin-top:26px">
+  <h3>How much could be wasted? Try it</h3><small>An estimate for KCC, not a measurement. Move the sliders to test your own assumptions.</small>
+  <div class="sl"><span>Rooms that leave an AC on</span><b id="vR">30</b></div><input id="sR" type="range" min="5" max="150" value="30">
+  <div class="sl"><span>Extra hours per day</span><b id="vH">1</b></div><input id="sH" type="range" min="0.5" max="4" step="0.5" value="1">
+  <div class="sl"><span>Teaching days a year</span><b id="vD">200</b></div><input id="sD" type="range" min="100" max="260" step="10" value="200">
+  <div class="out"><div><b id="oK">31.5 to 54</b><span>kWh wasted per day</span></div><div><b id="oY">6,300 to 10,800</b><span>kWh wasted per year</span></div><div><b id="oC">4.6 to 7.9</b><span>tonnes CO2 per year</span></div></div>
+  <p style="font-size:13px;color:#cfe8da;margin:14px 0 0">Uses a 1.5-ton AC at 1.05 to 1.8 kWh per hour and a grid factor of 0.727 kg CO2 per kWh. Default values are my Assignment 3A estimate: 30 of about 300 rooms, one extra AC-hour a day. Fans and lights are not counted. Target: at least <b id="oT">50%</b> less, a saving of <b id="oS">2.3 to 3.9</b> tonnes of CO2 a year.</p>
  </div>
 </div></section>
 
-<section id="insights"><div class="wrap">
- <div class="tag">2. Insights and research</div><h2>What I found out</h2>
- <div class="grid g2">
+<section id="insights" class="alt"><div class="wrap">
+ <div class="kick rv"><span class="num">02</span>Insights and research</div>
+ <h2 class="rv">What I found out</h2>
+ <div class="grid g2" style="margin-top:20px">
   <div class="grid">
-   <div class="card"><h3>Observed on campus</h3>On 8 Oct 2026 I photographed a classroom with AC, lights and fans on and a washroom tap running. A classmate, Pratyaksh Pandey, raised both issues.</div>
-   <div class="card"><h3>Made it measurable</h3>I turned the problems into 9 indicators, such as rooms left on while empty, AC running in an empty room, and kWh wasted per day.</div>
-   <div class="card"><h3>Practised the data skills</h3>I cleaned and charted a public air-quality dataset (116 days). Lesson: averages hide the extreme days.</div>
+   <div class="card rv"><h3>Observed on campus</h3><p>On 8 Oct 2026 I photographed a classroom with AC, lights and fans on and a washroom tap running. A classmate, Pratyaksh Pandey, raised both issues.</p></div>
+   <div class="card rv"><h3>Made it measurable</h3><p>I turned the problems into 9 indicators, such as rooms left on while empty, AC running in an empty room, and kWh wasted per day.</p></div>
+   <div class="card rv"><h3>Practised the data skills</h3><p>I cleaned and charted a public air-quality dataset (116 days). Lesson: averages hide the extreme days.</p></div>
   </div>
-  <figure><img src="assets/washroom.jpg" alt="Washroom tap running into the basin"><figcaption>KCC washroom tap running into the basin (my photo, 8 Oct 2026).</figcaption></figure>
+  <figure class="photo rv"><img src="assets/washroom.jpg" alt="KCC washroom tap running into the basin" data-zoom><figcaption>KCC washroom tap running into the basin (my photo, 8 Oct 2026). Click to enlarge.</figcaption></figure>
  </div>
- <div class="grid g4" style="margin-top:18px">
-  <div class="stat"><b>1.05 to 1.8 kWh</b><span>1.5-ton AC, per hour</span></div>
-  <div class="stat"><b>50 to 75 W</b><span>ceiling fan</span></div>
-  <div class="stat"><b>about 20 W</b><span>LED tube light</span></div>
-  <div class="stat"><b>about 31 L a day</b><span>tap dripping once a second</span></div>
+ <div class="grid g2" style="margin-top:26px">
+  <div class="card rv">
+   <h3>Where the energy goes</h3><p style="margin-bottom:6px">Typical power draw of each appliance (reference values):</p>
+   <div class="pb" data-on><span>1.5-ton AC</span><div class="t"><i style="--w:100%;background:var(--or)"></i></div><b>1,050 to 1,800 W</b></div>
+   <div class="pb" data-on><span>Ceiling fan</span><div class="t"><i style="--w:4.2%;background:var(--g)"></i></div><b>50 to 75 W</b></div>
+   <div class="pb" data-on><span>LED tube</span><div class="t"><i style="--w:1.4%;background:var(--bl)"></i></div><b>about 20 W</b></div>
+   <p style="font-size:13px">Sources: Onida, Crompton, Tata Power-DDL.</p>
+  </div>
+  <div class="grid g2" style="align-content:start">
+   <div class="stat rv"><b data-count="14" data-to="36" data-pre="14 to ">14 to 36</b><span>fan-hours equal one AC-hour</span></div>
+   <div class="stat rv"><b>about 31 L</b><span>a day from a tap dripping once a second</span></div>
+   <div class="stat rv"><b>0.727 kg</b><span>CO2 per kWh on India's grid</span></div>
+   <div class="stat rv"><b data-count="9">9</b><span>indicators I defined to measure it</span></div>
+  </div>
  </div>
- <div class="note"><b>Key insight:</b> one AC-hour equals about 14 to 36 fan-hours of energy, and nobody measures it. So measure and switch off the AC first, and watch the worst rooms, not just the average.</div>
+ <div class="callout rv"><b>Key insight:</b> one AC-hour equals about 14 to 36 fan-hours of energy, and nobody measures it. So measure and switch off the AC first, and watch the worst rooms, not just the average.</div>
 </div></section>
 
 <section id="solution"><div class="wrap">
- <div class="tag">3. The AI-enabled solution</div><h2>KCC SwitchSmart</h2>
- <p>The system switches off the AC, fans and lights when a room is empty and no class is due, and uses AI to spot waste that a fixed rule cannot predict.</p>
- <div class="flow">
-  <div><b>Sensors</b><span>presence, power, timetable</span></div>
-  <div><b>Controller</b><span>switch-off rule in each room</span></div>
-  <div class="ai"><b>AI model</b><span>anomaly score for each room</span></div>
-  <div class="out"><b>Output</b><span>alerts and dashboard</span></div>
+ <div class="kick rv"><span class="num">03</span>The AI-enabled solution</div>
+ <h2 class="rv">KCC SwitchSmart</h2>
+ <p class="lead rv">The system switches off the AC, fans and lights when a room is empty and no class is due, and uses AI to spot waste that a fixed rule cannot predict.</p>
+ <div class="flow rv" style="margin-top:26px">
+  <div class="st"><small>1. SENSE</small><h3>Sensors</h3><p>Presence, room power and the class timetable.</p></div>
+  <div class="st"><small>2. DECIDE</small><h3>Controller</h3><p>Empty for 15 minutes and no class due: switch off.</p></div>
+  <div class="st ai"><small>3. LEARN</small><h3>AI model</h3><p>Scores how unusual each room's power use is.</p></div>
+  <div class="st act"><small>4. ACT</small><h3>Alerts and dashboard</h3><p>Staff alerts with a reason, and the 10 worst rooms.</p></div>
+ </div>
+ <div class="grid g3" style="margin-top:24px">
+  <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg></div><h3>Presence sensing</h3><p>Detects people, not bags, so a room with bags on benches still switches off.</p></div>
+  <div class="card or rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Timetable-aware</h3><p>Both the timetable and the sensor must agree. A 1-hour override button keeps users in control.</p></div>
+  <div class="card bl rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20V9M9 20V4M15 20v-8M21 20V7"/></svg></div><h3>Measured in kWh</h3><p>Every room is metered, so waste becomes a number a department head can act on.</p></div>
  </div>
  <div class="grid g2" style="margin-top:18px">
-  <div class="card"><h3>Key features</h3>Presence sensing that detects people, not bags. Timetable-aware switch-off after 15 empty minutes, with a 1-hour override button. Energy metering for each room. AI alerts with a plain reason and a dashboard of the 10 worst rooms.</div>
-  <div class="card or"><h3>How AI is used</h3>Isolation Forest anomaly detection learns what normal power use looks like for each room, hour and day, then flags unusual windows. It needs no labelled examples, which KCC does not have yet.</div>
+  <div class="card or rv"><h3>How AI is used</h3><p>Isolation Forest anomaly detection learns what normal power use looks like for each room, hour and day, then flags unusual windows. It needs no labelled examples, which KCC does not have yet.</p></div>
+  <div class="card bl rv"><h3>Tools and AI used</h3><p>Python, pandas and scikit-learn for the simulation. Proposed hardware and software:</p><div class="chipset"><span>ESP32 controller</span><span>mmWave presence sensor</span><span>Energy meter</span><span>Looker Studio</span><span>Telegram alerts</span></div><p style="margin-top:10px">I used Claude (Anthropic AI assistant) to help structure the work and write code and documents.</p></div>
  </div>
- <div class="card bl" style="margin-top:16px"><h3>Tools and AI used</h3>Python, pandas and scikit-learn for the simulation. Proposed hardware: ESP32 controller, mmWave presence sensor, energy meter. Dashboard in Looker Studio, alerts by Telegram bot. I used Claude (Anthropic AI assistant) to help structure the work and write code and documents. The KCC observations and photos are my own.</div>
 </div></section>
 
-<section id="prototype"><div class="wrap">
- <div class="tag">4. Prototype</div><h2>A working simulation of the rule and the AI</h2>
- <figure><img src="assets/timeline.png" alt="Simulated room power on a normal day and on an overnight fault day"><figcaption>Simulated data for 10 rooms over 28 days, built in Python. This is a software prototype of the logic, not a field test at KCC.</figcaption></figure>
- <div class="grid g3" style="margin-top:16px">
-  <div class="card"><h3>Room user</h3>Power follows the classes. 15 minutes after the room empties, everything switches off; a button gives a 1-hour override.</div>
-  <div class="card or"><h3>Maintenance staff</h3>If a room draws power while empty, the AI flags it and sends an alert with the reason (red dots).</div>
-  <div class="card bl"><h3>Department head</h3>A dashboard and a monthly report list rooms left on, kWh wasted and the 10 worst rooms.</div>
+<section id="prototype" class="alt"><div class="wrap">
+ <div class="kick rv"><span class="num">04</span>Prototype</div>
+ <h2 class="rv">A working simulation you can explore</h2>
+ <p class="lead rv">I built a Python simulation of 10 rooms over 28 days. Pick a scenario to see one room's day, and where the AI raised a flag.</p>
+ <div class="simbox rv" style="margin-top:22px">
+  <span class="sticker">SIMULATED DATA, NOT A FIELD TEST</span>
+  <div class="tabs" id="tabs"><button data-k="normal" class="on">A normal day</button><button data-k="overnight">AC left on overnight</button><button data-k="subtle">A slightly faulty AC</button></div>
+  <canvas id="cv" height="300" aria-label="Simulated room power over a day"></canvas>
+  <div class="legend"><span><i style="background:var(--g)"></i>Room power (kW)</span><span><i style="background:var(--mint);border:1px solid var(--line)"></i>Class in session</span><span><i style="background:var(--red)"></i>Flagged by the AI</span></div>
+  <p id="cap" style="margin:12px 0 0;color:var(--mut);font-size:15px"></p>
+ </div>
+ <div class="grid g3" style="margin-top:20px">
+  <div class="card rv"><h3>Room user</h3><p>Power follows the classes. 15 minutes after the room empties, everything switches off, and a button gives a 1-hour override.</p></div>
+  <div class="card or rv"><h3>Maintenance staff</h3><p>If a room draws power while empty, the AI flags it and sends an alert with the reason.</p></div>
+  <div class="card bl rv"><h3>Department head</h3><p>A dashboard and a monthly report list rooms left on, kWh wasted and the 10 worst rooms.</p></div>
  </div>
 </div></section>
 
 <section id="results"><div class="wrap">
- <div class="tag">5. Prototype testing and results</div><h2>What the simulation showed</h2>
- <div class="grid g2">
-  <figure><img src="assets/results.png" alt="Share of simulated faults flagged by the AI"></figure>
-  <div class="grid">
-   <div class="card"><h3>How I tested</h3>Simulated 10 rooms for 28 days (about 27,000 time windows). The AI learned from days 1 to 14 and was tested on days 15 to 28 with faults I added.</div>
-   <div class="card"><h3>Results</h3>Caught 3 of 3 overnight AC faults and 6 of 6 "AC left on after class" events. Flagged 75 of 13,100 normal windows (0.57%) by mistake.</div>
-   <div class="card or"><h3>What went wrong</h3>A faulty AC using 30% extra power during class was almost missed (1.4%).</div>
+ <div class="kick rv"><span class="num">05</span>Testing and results</div>
+ <h2 class="rv">What the simulation showed</h2>
+ <p class="lead rv">The AI learned from days 1 to 14 and was tested on days 15 to 28, with faults I added (about 27,000 time windows in all).</p>
+ <div class="grid g2" style="margin-top:22px">
+  <div class="card rv" id="bars">
+   <h3>Share of fault windows the AI flagged</h3>
+   <div class="bar"><div class="row"><span>Overnight AC (3 events)</span><b>100%</b></div><div class="t"><i style="--w:100%"></i></div></div>
+   <div class="bar"><div class="row"><span>AC left on 2 hours after class (6 events)</span><b>94%</b></div><div class="t"><i style="--w:94%"></i></div></div>
+   <div class="bar bad"><div class="row"><span>AC drawing 30% extra power in class</span><b>1%</b></div><div class="t"><i style="--w:1.4%"></i></div></div>
+  </div>
+  <div class="grid g2" style="align-content:start">
+   <div class="stat rv"><b>3 of 3</b><span>overnight faults caught</span></div>
+   <div class="stat rv"><b>6 of 6</b><span>after-class events caught</span></div>
+   <div class="stat rv"><b>0.57%</b><span>false flags (75 of 13,100 normal windows)</span></div>
+   <div class="stat rv"><b style="color:var(--red)">1.4%</b><span>of the subtle fault detected</span></div>
   </div>
  </div>
- <div class="note"><b>Learning and next fix:</b> one model for all rooms cannot see a room that is slightly worse than normal, so version 2 will compare each room with its own history and with similar rooms. <b>Honest limit:</b> these are simulated results. They show the logic works, not that KCC will save energy. A classmate confirmed the problem, but real users have not tried the system yet.</div>
+ <div class="callout rv"><b>Learning and next fix:</b> one model for all rooms cannot see a room that is only slightly worse than normal. Version 2 will compare each room with its own history and with similar rooms.</div>
+ <div class="callout honest rv"><b>Honest limit:</b> these are simulated results. They show the logic works, not that KCC will save energy. A classmate confirmed the problem, but real users have not tried the system yet.</div>
 </div></section>
 
-<section id="impact"><div class="wrap">
- <div class="tag">6. Impact and implementation</div><h2>Estimated impact and rollout</h2>
- <div class="tw"><table><tr><th>Pillar</th><th>Metric</th><th>Now (assumed)</th><th>Target</th></tr>
- <tr><td>Environmental</td><td>Electricity wasted in empty rooms</td><td>31.5 to 54 kWh a day</td><td>At least 50% less (saves 15.8 to 27 kWh a day)</td></tr>
- <tr><td>Environmental</td><td>Carbon from that waste</td><td>4.6 to 7.9 t CO2 a year</td><td>2.3 to 3.9 t a year avoided</td></tr>
- <tr><td>Social</td><td>Complaints about unwanted switch-off</td><td>0 (no system yet)</td><td>2 or fewer a month</td></tr>
- <tr><td>Governance</td><td>Alerts acted on within 24 hours</td><td>Not tracked</td><td>80% or more</td></tr></table></div>
- <div class="grid g3" style="margin-top:18px">
-  <div class="card"><h3>Pilot: weeks 1 to 8</h3>10 rooms vs 10 similar rooms. Goal: 50% less waste, 2 or fewer complaints a month.</div>
-  <div class="card or"><h3>Expansion: months 3 to 6</h3>About 100 rooms. Goal: 70% of AI flags confirmed real by staff, alert owner named.</div>
-  <div class="card bl"><h3>Full-scale: months 7 to 12</h3>All about 300 rooms, then labs and offices. Monthly report to the department head.</div>
+<section id="impact" class="alt"><div class="wrap">
+ <div class="kick rv"><span class="num">06</span>Impact and implementation</div>
+ <h2 class="rv">Estimated impact and the rollout plan</h2>
+ <p class="lead rv">Figures marked "now" are assumed baselines, and targets are goals for a pilot to test, not results.</p>
+ <div class="grid g4" style="margin-top:22px">
+  <div class="card rv"><span class="pil E">ENVIRONMENTAL</span><h3>Electricity wasted</h3><div class="now">Now: 31.5 to 54 kWh a day</div><div class="tg">At least 50% less</div></div>
+  <div class="card rv"><span class="pil E">ENVIRONMENTAL</span><h3>Carbon from that waste</h3><div class="now">Now: 4.6 to 7.9 t CO2 a year</div><div class="tg">2.3 to 3.9 t avoided</div></div>
+  <div class="card rv"><span class="pil S">SOCIAL</span><h3>Complaints about unwanted switch-off</h3><div class="now">Now: 0 (no system yet)</div><div class="tg">2 or fewer a month</div></div>
+  <div class="card rv"><span class="pil G">GOVERNANCE</span><h3>Alerts acted on within 24 hours</h3><div class="now">Now: not tracked</div><div class="tg">80% or more</div></div>
  </div>
- <div class="note"><b>Main challenges:</b> AC cutting off during a lecture (timetable plus presence, override button); sensors missing seated students (mmWave sensors, tested in the pilot); alerts ignored (one named owner). Figures are assumptions and targets, not measured results. Sources: CEA 2023-24 grid factor 0.727 kg CO2 per kWh; Onida (AC power); Crompton (fans); Tata Power-DDL (LED tubes); US EPA WaterSense (leaks).</div>
+ <h2 style="font-size:26px;margin-top:40px" class="rv">Rollout in stages</h2>
+ <div class="tl rv">
+  <div class="ph"><h3>Pilot: weeks 1 to 8</h3><p>10 rooms against 10 similar rooms. Goal: 50% less waste and 2 or fewer complaints a month.</p></div>
+  <div class="ph"><h3>Expansion: months 3 to 6</h3><p>About 100 rooms. Goal: 70% of AI flags confirmed real by staff, and a named owner for alerts.</p></div>
+  <div class="ph"><h3>Full-scale: months 7 to 12</h3><p>All about 300 rooms, then labs and offices, with a monthly report to the department head.</p></div>
+ </div>
+ <h2 style="font-size:26px;margin-top:40px" class="rv">Main challenges and how I would handle them</h2>
+ <details class="rv"><summary>The AC cuts off during a lecture</summary><p>Switch-off needs both the timetable and the presence sensor to agree, there is a 1-hour override button, and the 15-minute wait can be lengthened. Warning sign: complaints rise above 2 a month.</p></details>
+ <details class="rv"><summary>Sensors miss people sitting still</summary><p>Use presence sensors that detect stationary people (mmWave) and test them in the pilot before buying more.</p></details>
+ <details class="rv"><summary>Alerts are ignored</summary><p>Name one owner for alerts, track alerts acted on within 24 hours, and have the department head sign off a monthly report.</p></details>
+ <details class="rv"><summary>The budget is not approved</summary><p>Start with 10 rooms, get vendor quotes, and show the kWh saved and the payback before asking for more.</p></details>
+ <p style="font-size:13.5px;color:var(--mut);margin-top:16px">Sources: CEA 2023-24 grid emission factor (0.727 kg CO2 per kWh); Onida (AC power); Crompton (fans); Tata Power-DDL (LED tubes); US EPA WaterSense (leaks).</p>
 </div></section>
 
-<section id="next"><div class="wrap">
- <div class="tag">7. What's next</div><h2>What I aspire to do next</h2>
- <div class="grid g3">
-  <div class="card"><h3>Next milestone</h3>Get approval for a 10-room pilot and a vendor quote for the hardware.</div>
-  <div class="card or"><h3>Support required</h3>A faculty sponsor, a facilities in-charge, campus IT for Wi-Fi, and a small hardware budget.</div>
-  <div class="card bl"><h3>How it scales</h3>More rooms, then labs and offices, then other colleges.</div>
- </div>
- <h2 style="font-size:20px;margin-top:28px">My learning journey</h2>
- <ol class="steps">
+<section id="journey"><div class="wrap">
+ <div class="kick rv"><span class="num">07</span>My journey and what's next</div>
+ <h2 class="rv">From a photo to a plan</h2>
+ <ul class="jr rv" style="margin-top:20px">
   <li><b>1A</b>Observed KCC and found the problem</li><li><b>1B</b>Turned it into measurable indicators</li><li><b>2A</b>Cleaned a real dataset</li><li><b>2B</b>Told a story with charts</li>
   <li><b>3A</b>Designed the SwitchSmart system</li><li><b>3B</b>Added an AI workflow</li><li><b>4A</b>Defined ESG metrics</li><li><b>4B</b>Planned scaling and rollout</li>
- </ol>
- <div class="note"><b>What I learned:</b> measure before you act; averages hide the worst days; a simulation is not a field test, so the honest next step is a real pilot; and AI is only useful when someone owns the alerts.</div>
+ </ul>
+ <div class="grid g3" style="margin-top:26px">
+  <div class="card rv"><h3>Next milestone</h3><p>Get approval for a 10-room pilot and a vendor quote for the hardware.</p></div>
+  <div class="card or rv"><h3>Support required</h3><p>A faculty sponsor, a facilities in-charge, campus IT for Wi-Fi, and a small hardware budget.</p></div>
+  <div class="card bl rv"><h3>How it scales</h3><p>More rooms, then labs and offices, then other colleges.</p></div>
+ </div>
+ <div class="callout rv"><b>What I learned:</b> measure before you act; averages hide the worst days; a simulation is not a field test, so the honest next step is a real pilot; and AI is only useful when someone owns the alerts.</div>
 </div></section>
 
-<footer><div class="wrap">Vishal Kumar Tripathi | KCC Institute of Technology and Management | 1M1B Green Skills &amp; Applied AI Internship, Batch 3<br>AI tools used: Claude (Anthropic) helped structure the work and write code and documents. The KCC observations and photos are my own.</div></footer>
+<section id="video" class="alt" hidden><div class="wrap">
+ <div class="kick"><span class="num">08</span>1-minute video</div><h2>Watch the project in one minute</h2>
+ <div class="photo" style="aspect-ratio:16/9"><iframe id="vf" style="width:100%;height:100%;border:0" allowfullscreen title="Project video"></iframe></div>
+</div></section>
+
+<footer><div class="wrap">
+ <p><b>Vishal Kumar Tripathi</b> | B.Tech 3rd Year | KCC Institute of Technology and Management | 1M1B Green Skills &amp; Applied AI Internship, Batch 3</p>
+ <p>AI tools used: Claude (Anthropic) helped structure the work and write code and documents. The KCC observations and photos are my own. The prototype is a simulation on synthetic data, and impact figures are assumptions and targets.</p>
+ <p><a href="assets/Vishal_Kumar_Tripathi_ProjectPortfolio.pdf">Download the portfolio (PDF)</a> | <a href="https://github.com/ImperialCoder01/Portfolio-1M1B">Source on GitHub</a></p>
+</div></footer>
+<div id="lb"><img alt=""></div>
+
+<script>
+const VIDEO_URL=""; // paste a YouTube embed link (https://www.youtube.com/embed/ID) or a Drive preview link (https://drive.google.com/file/d/ID/preview)
+const SIM={"normal":{"power":[0.01,0.05,0.02,0.04,0.0,0.03,0.07,0.03,0.01,0.0,0.03,0.07,0.0,0.03,0.0,0.02,0.04,0.0,0.02,0.04,0.03,0.04,0.0,0.04,0.01,0.05,0.0,0.02,0.03,0.07,0.03,0.04,0.04,0.07,0.02,0.0,0.0,0.05,0.04,0.02,1.92,1.94,1.94,1.95,1.9,0.0,0.0,0.0,1.89,1.98,1.87,1.95,1.96,1.96,1.94,1.97,1.99,0.02,0.04,0.07,0.0,0.02,0.01,0.04,0.0,0.07,0.05,0.05,0.0,0.0,0.07,0.02,0.0,0.04,0.05,0.05,0.03,0.06,0.01,0.05,0.03,0.03,0.02,0.02,0.03,0.02,0.05,0.01,0.08,0.01,0.06,0.06,0.03,0.03,0.01,0.01],"cls":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"flag":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"overnight":{"power":[2.06,2.1,2.02,2.03,2.05,2.04,2.03,2.06,2.06,2.02,2.04,2.08,2.05,2.03,2.04,2.02,2.11,2.08,2.13,2.06,2.04,2.03,2.07,2.04,0.1,0.03,0.04,0.03,0.01,0.02,0.03,0.02,0.01,0.04,0.04,0.04,2.08,2.05,2.05,2.1,2.03,0.0,0.05,0.01,2.02,2.08,2.05,2.02,2.11,0.0,0.03,0.0,2.06,2.03,2.08,2.05,2.09,2.04,2.01,2.06,2.05,2.0,2.02,2.03,2.1,0.05,0.02,0.04,0.0,0.01,0.04,0.03,0.01,0.03,0.04,0.03,0.06,0.04,0.05,0.08,0.05,0.08,0.01,0.0,0.03,0.02,0.07,0.0,0.03,0.04,0.03,0.02,0.04,0.06,0.08,0.03],"cls":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"flag":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"subtle":{"power":[0.0,0.03,0.04,0.0,0.04,0.0,0.05,0.06,0.04,0.0,0.0,0.05,0.03,0.0,0.07,0.03,0.01,0.06,0.01,0.01,0.04,0.08,0.08,0.04,0.04,0.05,0.0,0.05,0.01,0.04,0.02,0.05,0.03,0.0,0.04,0.05,2.6,2.58,2.65,2.6,2.0,0.06,0.04,0.0,0.0,0.02,0.05,0.02,2.62,2.59,2.64,2.58,2.61,2.61,2.65,2.52,2.57,2.62,2.65,2.6,2.58,2.62,2.62,2.57,2.0,0.07,0.09,0.05,0.03,0.03,0.05,0.03,0.04,0.0,0.07,0.0,0.02,0.03,0.09,0.02,0.01,0.01,0.08,0.0,0.0,0.11,0.05,0.0,0.03,0.03,0.06,0.09,0.04,0.01,0.05,0.01],"cls":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"flag":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// theme
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t;else if(matchMedia("(prefers-color-scheme:dark)").matches)root.dataset.theme="dark"}catch(e){}
+$("#theme").onclick=()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){};draw()};
+// progress + active nav
+addEventListener("scroll",()=>{const h=document.documentElement;$("#bar").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+const secs=$$("section[id]"),links=$$(".links a");
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe&&secs.forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe(s));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});$$(".rv").forEach(e=>io.observe(e));
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io2.unobserve(e.target)}}),{threshold:.3});$$(".pb,.bar").forEach(e=>io2.observe(e));
+// calculator
+const fmt=n=>n.toLocaleString("en-IN",{maximumFractionDigits:1});
+function calc(){const r=+$("#sR").value,h=+$("#sH").value,d=+$("#sD").value;$("#vR").textContent=r;$("#vH").textContent=h;$("#vD").textContent=d;
+ const k1=r*h*1.05,k2=r*h*1.8,y1=k1*d,y2=k2*d,c1=y1*.727/1000,c2=y2*.727/1000;
+ $("#oK").textContent=fmt(k1)+" to "+fmt(k2);$("#oY").textContent=fmt(Math.round(y1))+" to "+fmt(Math.round(y2));$("#oC").textContent=fmt(c1)+" to "+fmt(c2);$("#oS").textContent=fmt(c1/2)+" to "+fmt(c2/2)}
+["sR","sH","sD"].forEach(i=>$("#"+i).addEventListener("input",calc));calc();
+// sim chart
+const caps={normal:"A normal day in the simulation: power follows the class periods, and 15 minutes after each class the room switches off. The AI flags nothing.",overnight:"A fault day: a relay failure leaves the AC running from midnight to 6 AM with nobody in the room. The AI flags every window of it (red dots).",subtle:"An AC that draws 30% more power than normal during class. The AI flags almost none of it, which is the weakness I found. Version 2 will compare each room with its own history."};
+let cur="normal";
+function draw(){const c=$("#cv"),dpr=devicePixelRatio||1,W=c.clientWidth,H=300;c.width=W*dpr;c.height=H*dpr;const x=c.getContext("2d");x.scale(dpr,dpr);x.clearRect(0,0,W,H);
+ const cs=getComputedStyle(root),col=v=>cs.getPropertyValue(v).trim();const d=SIM[cur],m={l:46,r:12,t:12,b:44},pw=W-m.l-m.r,ph=H-m.t-m.b,max=3;
+ const X=i=>m.l+i/95*pw,Y=v=>m.t+ph-(v/max)*ph;
+ x.font="12px Inter,sans-serif";x.fillStyle=col("--mut");x.strokeStyle=col("--line");x.lineWidth=1;
+ for(let v=0;v<=3;v+=1){x.beginPath();x.moveTo(m.l,Y(v));x.lineTo(W-m.r,Y(v));x.stroke();x.fillText(v+" kW",6,Y(v)+4)}
+ for(let hr=0;hr<=24;hr+=3){const px=m.l+hr/24*pw;x.fillText(hr,px-5,H-24)}
+ x.fillText("Hour of day",W/2-30,H-5);
+ x.fillStyle=root.dataset.theme==="dark"?"rgba(111,207,154,.16)":col("--mint");d.cls.forEach((c,i)=>{if(c)x.fillRect(X(i)-pw/190,m.t,pw/95,ph)});
+ x.strokeStyle=col("--g");x.lineWidth=2.2;x.beginPath();d.power.forEach((p,i)=>i?x.lineTo(X(i),Y(p)):x.moveTo(X(i),Y(p)));x.stroke();
+ x.fillStyle=col("--red");d.flag.forEach((f,i)=>{if(f){x.beginPath();x.arc(X(i),Y(d.power[i]),3.4,0,7);x.fill()}});
+ $("#cap").textContent=caps[cur]}
+$$("#tabs button").forEach(b=>b.onclick=()=>{$$("#tabs button").forEach(o=>o.classList.remove("on"));b.classList.add("on");cur=b.dataset.k;draw()});
+addEventListener("resize",draw);draw();
+// lightbox
+$$("[data-zoom]").forEach(i=>i.addEventListener("click",()=>{$("#lb img").src=i.src;$("#lb").classList.add("on")}));$("#lb").onclick=()=>$("#lb").classList.remove("on");addEventListener("keydown",e=>{if(e.key==="Escape")$("#lb").classList.remove("on")});
+// video
+if(VIDEO_URL){$("#vf").src=VIDEO_URL;$("#video").hidden=false;const a=document.createElement("a");a.href="#video";a.textContent="Video";$(".links").appendChild(a)}
+</script>
 </body></html>
