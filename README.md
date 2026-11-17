@@ -1,4 +1,4 @@
-# KCC SwitchSmart: Project Portfolio
+# SwitchSmart: Project Portfolio
 
 Switching off hidden energy waste in classrooms with sensors and AI.
 Portfolio of **Vishal Kumar Tripathi** (B.Tech, 3rd Year, KCC Institute of Technology and Management), 1M1B Green Skills & Applied AI Internship, Batch 3.
